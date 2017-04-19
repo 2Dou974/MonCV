@@ -19,7 +19,7 @@ class DetailController extends Controller
             
             default:
                 // replace this example code with whatever you need
-        return $this->render('Detail/detail.html.twig',array('cvItems' =>$cvItems));
+                return $this->render('Detail/detail.html.twig',array('cvItems' =>$cvItems));
                 break;
         }
       
