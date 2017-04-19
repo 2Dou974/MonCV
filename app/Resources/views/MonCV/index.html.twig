@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+	
+
+{% set currentMenu = 1%}
+
+{% block title %}Olivier Ardouvin{%endblock %}
+{% block body %}
+<div itemscope="" itemtype="http://schema.org/Person">
+
+	<h1 itemprop="name">Olivier Ardouvin</h1>
+
+	<div class="row">
+		<div class='col-md-4 col-md-push-8'>
+			<div class="panel panel-info ">
+	  			<div class="panel-heading"><h2 class="panel-title">Information Civil</h2></div>
+		  		<div class="panel-body">
+		  			<div class='row'>
+		    			<label class='col-md-4 text-nowrap'>Adresse :</label>
+		    			<div class='col-md-8' itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		      				<span itemprop="streetAddress">34 chemin cadet, bois de néfle la plaine</span>
+		      				<br/>
+		      				<span itemprop="postalCode">97411</span> <span itemprop="addressLocality">SAINT PAUL</span>
+		    			</div>
+		    		</div>    		
+		      		<div class='row'>
+		    			<label class='col-md-4 text-nowrap'>Téléphone:</label>
+		    			<div class='col-md-8' itemprop="telephone">
+		    				06.92.27.15.60
+		    			</div>
+		        	</div>
+		      		<div class='row'>
+		     			<label class='col-md-4 text-nowrap'>Email:</label>
+		    			<div class='col-md-8' itemprop="email">
+		    				olivier.ardouvin@gmail.com
+		    			</div>
+	        		</div>
+		  		</div>
+	  		</div>
+		</div>
+		<div class='col-md-8 col-md-pull-4'>
+			<div class="panel panel-info ">
+				<div class="panel-heading">
+			    	<h2 class="panel-title">Compétences</h2>
+			  	</div>
+			  	<div class="panel-body">
+			  	 {{ render(controller('AppBundle:Detail:cvDetail',{cvItems:comps}  )) }}
+			  	
+			  			    
+			  	</div>
+			</div>
+			<div class="panel panel-info ">
+		  		<div class="panel-heading">
+		    		<h2 class="panel-title">Compétences Technique</h2>
+		  		</div>
+		  		<div class="panel-body">
+		  		{{ render(controller('AppBundle:Detail:cvDetail',{cvItems:notes}  )) }}
+		  		</div>
+			</div>
+			<div class="panel panel-info ">
+		  		<div class="panel-heading">
+		    		<h2 class="panel-title">Expériences professionnelles</h2>
+		  		</div>
+		  		<div class="panel-body">		    
+		  		</div>
+			</div>
+			<div class="panel panel-info ">
+		  		<div class="panel-heading">
+		    		<h2 class="panel-title">Formations</h2>
+		  		</div>
+		  		<div class="panel-body">		    
+		  		</div>
+			</div>
+		</div>
+	</div>
+	<span class='hidden' itemprop="birthDate"  content="1981-05-09"></span>
+</div>
+{% endblock %}
