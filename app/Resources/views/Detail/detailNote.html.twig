@@ -1,3 +1,17 @@
+
 {% for cvitem in cvItems%}
-			  		tt:{{cvitem.title}}
+	<div class="col-md-4 col-lg-3 text-nowrap">
+	{{cvitem.title}}</div>
+		<div class="stars col-md-8 col-lg-3">
+		{% for i in 1..cvitem.note/2 %}
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+{% endfor %}
+
+{%if cvitem.note/2+1 <=5 %}
+ {%for i in cvitem.note/2+1..5 %}
+    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+{%endfor %}
+{%endif %}
+</div>
 			  		{%endfor%}	
+			  		

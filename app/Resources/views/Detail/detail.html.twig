@@ -1,3 +1,5 @@
-{% for cvitem in cvItems%}
-			  		{{cvitem.title}}
-			  		{%endfor%}	
+<ul>
+	{% for cvitem in cvItems%}
+		<li>{{cvitem.title}}</li>
+	{%endfor%}	
+</ul>

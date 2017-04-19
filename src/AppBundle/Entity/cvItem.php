@@ -38,6 +38,13 @@ class cvItem
     /**
      * @var string
      *
+     * @ORM\Column(name="title2", type="string", length=255, nullable=true)
+     */
+    private $title2;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="body", type="text", nullable=true)
      */
     private $body;
@@ -52,14 +59,14 @@ class cvItem
     /**
      * @var string
      *
-     * @ORM\Column(name="tech", type="string", length=255)
+     * @ORM\Column(name="tech", type="string", length=255, nullable=true)
      */
     private $tech;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="note", type="integer")
+     * @ORM\Column(name="note", type="integer", nullable=true)
      */
     private $note;
 
@@ -120,6 +127,30 @@ class cvItem
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set title2
+     *
+     * @param string $title2
+     *
+     * @return cvItem
+     */
+    public function setTitle2($title2)
+    {
+        $this->title2 = $title2;
+
+        return $this;
+    }
+
+    /**
+     * Get title2
+     *
+     * @return string
+     */
+    public function getTitle2()
+    {
+        return $this->title2;
     }
 
     /**

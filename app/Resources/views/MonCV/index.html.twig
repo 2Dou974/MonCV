@@ -36,6 +36,26 @@
 	        		</div>
 		  		</div>
 	  		</div>
+	  		<div class="left">
+	  		<div class="panel panel-info down-md">
+				<div class="panel-heading">
+			    	<h2 class="panel-title">Centres d'intérêts</h2>
+			  	</div>
+			  	<div class="panel-body">
+			  	 {{ render(controller('AppBundle:Detail:cvDetail',{cvItems:leasures}  )) }}		  	
+			  			    
+			  	</div>
+			</div>
+			<div class="panel panel-info down-md">
+				<div class="panel-heading">
+			    	<h2 class="panel-title">Langues</h2>
+			  	</div>
+			  	<div class="panel-body">
+			  	 {{ render(controller('AppBundle:Detail:cvDetail',{cvItems:languages}  )) }}		  	
+			  			    
+			  	</div>
+			</div>
+			</div>
 		</div>
 		<div class='col-md-8 col-md-pull-4'>
 			<div class="panel panel-info ">
@@ -50,7 +70,7 @@
 			</div>
 			<div class="panel panel-info ">
 		  		<div class="panel-heading">
-		    		<h2 class="panel-title">Compétences Technique</h2>
+		    		<h2 class="panel-title">Compétences Techniques</h2>
 		  		</div>
 		  		<div class="panel-body">
 		  		{{ render(controller('AppBundle:Detail:cvDetail',{cvItems:notes}  )) }}
@@ -72,6 +92,10 @@
 			</div>
 		</div>
 	</div>
+		<div class="down"></div>
 	<span class='hidden' itemprop="birthDate"  content="1981-05-09"></span>
 </div>
 {% endblock %}
+        {% block javascripts %}
+<script src="{{ asset('js/home.js') }}" />
+        {% endblock %}

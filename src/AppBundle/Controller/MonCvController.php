@@ -19,19 +19,23 @@ class MonCvController extends Controller
             -> findAll();
             foreach ($cvitems as $cvitem) {
               switch ($cvitem->gettype()) {
-                    case 1:
+                    case 1://Compétences
                        $comps[]=$cvitem;
                         break;
-                    case 2:
+                    case 2://Compétences Technique
                        $notes[]=$cvitem;
                         break;
-                    
+                    case 3://Centres d'intérêts
+                       $leasures[]=$cvitem;
+                        break;
+                    case 4://languages
+                    $languages[]=$cvitem;
                     default:
                         # code...
                         break;
                 }  # code...
             }
            // replace this example code with whatever you need
-        return $this->render('MonCV/index.html.twig',array('comps' => $comps,'notes'=>$notes));
+        return $this->render('MonCV/index.html.twig',array('comps' => $comps,'notes'=>$notes,'leasures'=>$leasures,'languages'=>$languages));
     }
 }
