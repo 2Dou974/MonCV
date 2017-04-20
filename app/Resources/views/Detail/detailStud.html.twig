@@ -1,0 +1,12 @@
+{% for cvitem in cvItems%}
+<div class="row">
+	<div class="col-sm-2 col-sm-push-10" >
+	{{cvitem.date}}
+	</div>	
+	<div class="col-sm-10 col-sm-pull-2"">	
+		<h3>{{cvitem.title}}</h3>
+		<p>{{cvitem.body}}</p>
+	</div>
+	
+</div>
+{%endfor%}	

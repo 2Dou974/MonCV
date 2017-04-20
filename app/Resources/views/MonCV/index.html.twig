@@ -4,10 +4,25 @@
 {% set currentMenu = 1%}
 
 {% block title %}Olivier Ardouvin{%endblock %}
-{% block body %}
-<div itemscope="" itemtype="http://schema.org/Person">
+{% block bodyTop %}
+<div class="home" itemscope="" itemtype="http://schema.org/Person">
 
-	<h1 itemprop="name">Olivier Ardouvin</h1>
+ <div class="header-hero container-fluid">
+ 	<div class="container">
+ 		<div class='imgHero col-md-4 hidden-sm  hidden-xs'>
+ 			<img src="/img/bg.jpg" class="img-responsive">
+		</div>	
+		<div class="txtHero col-md-8">
+  			<h1 itemprop="name">Olivier Ardouvin</h1>
+			<h2>Recherche activement un emploi</h2>
+		</div>
+		
+ 	</div>
+  </div>
+{%endblock %}
+{% block body %}
+
+
 
 	<div class="row">
 		<div class='col-md-4 col-md-push-8'>
@@ -48,7 +63,7 @@
 			</div>
 			<div class="panel panel-info down-md">
 				<div class="panel-heading">
-			    	<h2 class="panel-title">Langues</h2>
+			    	<h2 class="panel-title">Langue étrangére</h2>
 			  	</div>
 			  	<div class="panel-body">
 			  	 {{ render(controller('AppBundle:Detail:cvDetail',{cvItems:languages}  )) }}		  	
@@ -80,14 +95,16 @@
 		  		<div class="panel-heading">
 		    		<h2 class="panel-title">Expériences professionnelles</h2>
 		  		</div>
-		  		<div class="panel-body">		    
+		  		<div class="panel-body">	
+		  		{{ render(controller('AppBundle:Detail:cvDetail',{cvItems:xp}  )) }}	    
 		  		</div>
 			</div>
 			<div class="panel panel-info ">
 		  		<div class="panel-heading">
 		    		<h2 class="panel-title">Formations</h2>
 		  		</div>
-		  		<div class="panel-body">		    
+		  		<div class="panel-body">	
+		  		{{ render(controller('AppBundle:Detail:cvDetail',{cvItems:studies}  )) }}	    	    
 		  		</div>
 			</div>
 		</div>

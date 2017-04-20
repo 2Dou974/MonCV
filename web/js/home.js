@@ -6,7 +6,7 @@ checkIfBlock =function(target) {
 
 CheckDownBlock = function()
 {
-	if(checkIfBlock('.viewport-check .visible-lg-block'))
+	if(checkIfBlock('.viewport-check .visible-md-block') ||checkIfBlock('.viewport-check .visible-lg-block'))
 	{
 
 		$(".down >.down-md").each(function()
@@ -25,7 +25,7 @@ CheckDownBlock = function()
 
 $(function()
 {
-	
+	$(".home .header-hero .txtHero").fadeIn();
 	 // Add some invisible elements with Bootstrap CSS visibile utility classes
 $( "body" ).append( "<div style='visibility:hidden;' class='viewport-check'><span class='visible-xs-block'></span><span class='visible-sm-block'></span><span class='visible-md-block'></span><span class='visible-lg-block'></span></div>" );
 

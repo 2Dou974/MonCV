@@ -1,7 +1,23 @@
 body{
-	padding-top: 70px;
+	padding-top: 50px;
 }
 ul{
 	list-style-type: none; 
 }
-.stars{text-align: right;padding-right: 4em;}
+.home .stars{text-align: right;padding-right: 4em;}
+.home .header-hero{
+	background: #e5e5e5;
+	margin-bottom:2em;
+	position: relative;
+	box-shadow: 0 10px 10px #e5e5e5;
+}
+.home .header-hero .txtHero{
+	display: none;
+
+}
+@media (min-width: 992px){
+.home .header-hero .txtHero{
+	padding-top: 3em;
+
+}
+}
